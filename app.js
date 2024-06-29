@@ -94,9 +94,9 @@ app.use("/",userRouter);
 
 
 
-app.all("*",(req,res,next)=>{
-    next(new ExpressError(404,"Page not found"))
-})
+// app.all("*",(req,res,next)=>{
+//     next(new ExpressError(404,"Page not found"))
+// })
 // error handling middleware/
 app.use((err,req,res,next)=>{
     res.render("error.ejs",{err});

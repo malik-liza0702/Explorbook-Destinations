@@ -11,7 +11,7 @@ const reviewController=require("../controllers/review.js")
 
 // Reviews
 // Post review route
-router.post("/",validateReview,isLoggedIn,wrapAsync(reviewController.createReview));
+router.post("/",isLoggedIn,validateReview,wrapAsync(reviewController.createReview));
 
 
 // delete review route

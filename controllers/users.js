@@ -32,6 +32,7 @@ module.exports.renderLoginForm=(req,res)=>{
 module.exports.login=async(req,res)=>{
     req.flash("success","Welcome to explorbook! You are logged in!");
     let redirectUrl=res.locals.redirectUrl || "/listings";
+    console.log( "redirect url in login",redirectUrl)
     res.redirect(redirectUrl);
 }
 
