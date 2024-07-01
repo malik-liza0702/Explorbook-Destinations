@@ -3,41 +3,58 @@ body{
     display:flex;
     flex-direction:column;
     min-height:100vh;
-    
-
+    overflow-x:hidden;
+}
+.container{
+    flex:1;
 }
 .navbar{
     height:5rem;
     background:white;
 
 }
-.fa-compass{
-    color:#fe424c;
-    font-size: 2rem;
-}
+
 .nav-link{
     color:#222222 !important;
 }
-.f-info-links{
-    text-decoration:none;
-    color:#222222;
-    width:100%;
-}
-
-
-.f-info-socials{
+/* footer */
+/* Footer */
+  .f-info-links a {
+    text-decoration: none;
+    color: #222222;
+  }
+  .f-info-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .f-info-links,
+  .f-info-socials,
+  .f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .f-info-socials i {
     font-size: 1.2rem;
-    width:100%;
-}
-.f-info{
+    margin-right: 1rem;
+    color: #222222;
+  }
+
+  .f-info-socials i:hover {
+    color: #3b3b3b;
+  }
+  
+  .f-info {
     text-align: center;
-    height:8rem;
+    height: 8rem;
     background-color: #ebebeb;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items:center;
-}
+    align-items: space-evenly;
+  }
 
 /* cards */
 .listing-card{
@@ -70,12 +87,14 @@ body{
 
 }
 .add-btn{
-    background-color: #fe424c !important;
+    font-weight: bold !important;
+    background-color: rgb(26,234,172) !important;
     border: none !important;
 }
 /* edit page */
 .edit-btn{
-    background-color: #fe424c !important;
+    font-weight: bold !important;
+    background-color: rgb(26,234,172)  !important;
     border: none !important;
 }
 /* show page */
@@ -85,3 +104,61 @@ body{
 .btns{
     display:flex;
 }
+
+/* map */
+#map{
+    height:400px;
+    width:54vw;
+}
+
+@media screen and (min-width: 577px) {
+    #listing_image {
+      width: 100%;
+      height: auto;
+    }
+    
+    #listing_image img {
+      height: 100%;
+      width: 100%;
+    }
+     /* #map {
+      height: 366px !important;
+      width: auto !important;
+      margin: 10px;
+    } */
+  }
+  
+  @media screen and (max-width: 576px) {
+    #listing_image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .show-container {
+      padding: 10px 20px;
+    }
+  
+    #listing_image img {
+      height: 100%;
+      width: 100%;
+    }
+  
+    /* #map {
+      height: 366px !important;
+      width: auto !important;
+      margin: 10px;
+    } */
+  
+    .tittle h3 {
+      padding-left: 5px;
+    }
+  
+    .review-sec {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  
+    .del {
+      margin-left: 10px !important;
+    }
+  }
