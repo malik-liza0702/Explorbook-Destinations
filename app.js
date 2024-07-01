@@ -70,6 +70,10 @@ const sessionOptions={
     }
 }
 
+app.get("/",(req,res)=>{
+    res.redirect("/listings");
+})
+
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -105,4 +109,8 @@ app.use((err,req,res,next)=>{
 
 app.listen(8080,()=>{
     console.log("Server is listening at port 8080")
+})
+
+app.get("/listings",(req,res)=>{
+
 })
